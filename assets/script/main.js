@@ -1,3 +1,18 @@
+// Header Section
+var hamburger = $('.hamburger-menu');
+
+$('.hamburger-button').on('click', function () {
+  hamburger.toggleClass('hamburger-menu-active');
+});
+
+$('.hamburger-menu-list').on('click', function () {
+  hamburger.removeClass('hamburger-menu-active');
+});
+
+$(window).on('resize', function () {
+  hamburger.removeClass('hamburger-menu-active');
+});
+
 // CustomerVoices Section
 $(document).ready(function(){
   $('.customer__slider').slick({
