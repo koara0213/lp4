@@ -38,3 +38,48 @@ $(document).ready(function(){
     ]
   });
 });
+
+// Q&A
+$(document).ready(function() {
+  $('.qa__answer').hide();
+});
+
+$('.qa__item').on('click', function() {
+  var answerBox = $(this).closest('.qa__item').find('.qa__answer');
+  answerBox.slideToggle();
+
+  var icon = $(this).closest('.qa__item').find('.bi-caret-down-fill, .bi-caret-up-fill');
+  if (icon.hasClass('bi-caret-down-fill')) {
+    icon.removeClass('bi-caret-down-fill').addClass('bi-caret-up-fill');
+  } else {
+    icon.removeClass('bi-caret-up-fill').addClass('bi-caret-down-fill');
+  }
+});
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const smoothScrollTrigger = document.querySelectorAll('a[href^="#"]');
+
+    for (let i = 0; i < smoothScrollTrigger.length; i++) {
+      smoothScrollTrigger[i].addEventListener('click', function (e) {
+        e.preventDefault();
+        let href = this.getAttribute('href');
+        let targetElement = document.getElementById(href.replace('#', ''));
+
+        const rect = targetElement.getBoundingClientRect().top;
+        const offset = window.pageYOffset;
+        const target = rect + offset;
+        const s = document.documentElement.style;
+        s.scrollBehavior = 'smooth';
+
+        window.scrollTo({
+          top: target,
+          behavior: 'smooth'
+        });
+
+        setTimeout(() => {
+          s.scrollBehavior = 'auto';
+        }, 1000);
+      });
+    }
+  });
+
