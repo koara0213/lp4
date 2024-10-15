@@ -42,20 +42,21 @@
     <!-- Header Section -->
     <header class="header">
       <h1 class="header__logo">
-        <a href="/" class="header__logo-link">
+        <a href="index.html" class="header__logo-link">
           <img src="assets/image/header-logo.png" alt="Kiramaki Farm" class="header__logo-image">
         </a>
       </h1>
 
 
       <button type="button" class="hamburger-button">
+        <div></div>
       </button>
 
       <nav class="hamburger-menu">
         <ul class="hamburger-menu-list">
-          <li><a id="top" href="#top">トップ</a></li>
-          <li><a id="price" href="#price">価格・スペック</a></li>
-          <li><a id="qa" href="#qa">よくあるご質問</a></li>
+          <li><a id="top" href="index.html">トップ</a></li>
+          <li><a id="price" href="price.html">価格・スペック</a></li>
+          <li><a id="qa" href="faq.html">よくあるご質問</a></li>
         </ul>
       </nav>
 
@@ -87,7 +88,7 @@
       <div class="about__content">
         <div class="about__backImg">
           <div class="about__textArea">
-            <p class="about__textTitle">キラメキファームは、これからの農業を<br class="res">次世代の子どもたちに残すために<br class="res">創設されたイノベーションカンパニーです。</p>
+            <p class="about__textTitle">キラメキファームは、これからの農業を<br class="pc_res">次世代の子どもたちに残すために<br class="pc_res">創設されたイノベーションカンパニー<br class="sp_res">です。</p>
             <p class="about__text">キラメキファームは革新的デザインと最新技術を活用した農業機器メーカーです。未来の農業を実現するために、ビッグデータを駆使して省エネルギー・効率化を実現し、自動運転技術を搭載したロボットで一年中稼働することができる機器を提供します。リジェネラティブ農業を実現する技術を用いて、持続可能な農業システムをサポートします。私たちの社是は、次世代の子供たちに豊かな地球環境を残すこと。イノベーションを起こすことで農業に新たな価値を生み出し、地球環境保全に貢献することを目指しています。</p>
           </div>
         </div>
@@ -169,12 +170,14 @@
         <h2 class="service__main">Case</h2>
         <h3 class="service__sub">お客様の事例紹介</h3>
       </div>
-      <img src="assets/image/case_1_sp.png" alt="" class="case__image">
-      <p class="case__description">利用開始後約1年で売り上げが150％増加</p>
-      <img src="assets/image/case_2_sp.png" alt="" class="case__image">
-      <p class="case__description">無駄な作業が減り、30％のコストカットに成功</p>
-      <img src="assets/image/case_3_sp.png" alt="" class="case__image">
-      <p class="case__description">24時間対応のサポートデスクがあるのも安心です</p>
+      <div class="case__container">
+        <img src="assets/image/case_1_sp.png" alt="" class="case__image">
+        <p class="case__description">利用開始後約1年で売り上げが150％増加</p>
+        <img src="assets/image/case_2_sp.png" alt="" class="case__image">
+        <p class="case__description">無駄な作業が減り、30％のコストカットに成功</p>
+        <img src="assets/image/case_3_sp.png" alt="" class="case__image">
+        <p class="case__description">24時間対応のサポートデスクがあるのも安心です</p>
+      </div>
     </section>
 
     <!-- News Section -->
@@ -215,14 +218,16 @@
           <a href="#" class="news__text">キラメキ農法で収穫量2倍！革新的な農業技術が話題</a>
         </li>
       </ul>
-      <a href="#" class="news__button">ニュース一覧へ</a>
+      <a href="news/" class="news__button">ニュース一覧へ</a>
     </section>
 
     <!-- Footer Section -->
     <footer class="footer">
-      <span class="footer__text">価格・スペック</span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dash-lg footer-img" viewBox="0 0 16 16">
+      <a href="price.html" class="footer__text">価格・スペック</a>
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dash-lg footer-img" viewBox="0 0 16 16">
         <path fill-rule="evenodd" d="M2 8a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11A.5.5 0 0 1 2 8Z" />
-      </svg><span class="footer__text">よくあるご質問</span>
+      </svg>
+      <a href="faq.html" class="footer__text">よくあるご質問</a>
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

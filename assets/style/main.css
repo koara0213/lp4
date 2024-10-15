@@ -61,15 +61,15 @@ li {
 }
 
 .hamburger-menu {
-  width: 100%;
+  width: 92%;
   background-color: #168352;
   box-shadow: 0 0 .625rem 0 rgb(0 0 0 / 20%);
   transition: opacity .3s linear;
-  border-radius: 2rem;
+  border-radius: 25px;
   position: absolute;
   visibility: hidden;
   opacity: 0;
-  top: 78px;
+  top: 63px;
 }
 
 @media (min-width: 768px) {
@@ -91,7 +91,7 @@ li {
 }
 
 .hamburger-menu-list {
-  padding: 28px 10px 0px 10px;
+  padding: 19px 10px 21px 7px;
   list-style: none;
   font-size: 1.125rem;
   font-weight: 700;
@@ -133,29 +133,41 @@ li {
 }
 
 .hamburger-button {
-  background-color: #000;
-  width: 2.5rem;
-  height: 0.125rem;
   position: relative;
-  margin-top: 0.0313rem;
+  width: 40px; /* ハンバーガーメニュー全体の幅 */
+  height: 2px;
+  background-color: transparent; /* メニュー全体は透明 */
+  display: inline-block;
 }
 
 .hamburger-button::before,
-.hamburger-button::after {
+.hamburger-button::after,
+.hamburger-button div { /* 3本の線を定義 */
   content: '';
-  width: 1.5rem;
-  height: 0.125rem;
-  background-color: #000;
   position: absolute;
-  left: 0;
+  width: 100%; /* 線の幅を親要素に対して100% */
+  height: 2px;
+  background-color: #000;
+  right: 0px;
 }
 
 .hamburger-button::before {
-  top: -0.4375rem;
+  top: -8px; /* 上の線を適切に配置 */
 }
 
 .hamburger-button::after {
-  top: 0.4375rem;
+  top: 8px; /* 下の線を適切に配置 */
+}
+
+.hamburger-button div {
+  top: 0; /* 中央の線 */
+}
+
+.hamburger-button,
+.hamburger-button::before,
+.hamburger-button::after,
+.hamburger-button div {
+  box-sizing: content-box; /* ボックスモデルを調整 */
 }
 
 @media (min-width: 768px) {
@@ -375,7 +387,7 @@ li {
 
 @media(min-width: 1210px) {
   .about__textArea {
-    padding: 4.861vw 1.736vw 4.861vw 1.736vw;
+    padding: 70px 20px 70px 5px;
     font-size: 20px;
     line-height: 34px;
   }
@@ -385,30 +397,52 @@ li {
   font-size: 15px;
   line-height: 26.3px;
   padding-top: 9px;
-  padding-left: 25px;
-  padding-right: 30px;
-  font-weight: 400;
+  padding-left: 19px;
+  padding-right: 24px;
 }
 
 @media(min-width: 1210px) {
   .about__text{
     padding-top: 26px;
+    padding-left: 20px;
+    padding-right: 10px;
+    letter-spacing: -0.15px;
   }
 }
 
 .about__textTitle {
-  padding-left: 25px;
-  padding-right: 30px;
-  font-size:large 18px;
+  padding-left: 18px;
+  padding-right: 5px;
+  font-size: 18px;
   font-weight: 700;
 }
 
+@media(min-width: 1210px) {
+  .about__textTitle {
+    letter-spacing: 2px;
+  }
+}
+
 .about__textTitle .res {
+  display: inline;
+}
+
+.about__textTitle .sp_res {
+  display: inline;
+}
+
+@media(min-width: 1210px) {
+  .about__textTitle .sp_res {
+    display: none;
+  }
+}
+
+.about__textTitle .pc_res{
   display: none;
 }
 
 @media(min-width: 1210px) {
-  .about__textTitle .res{
+  .about__textTitle .pc_res{
     display: inline;
   }
 }
@@ -449,6 +483,12 @@ li {
   margin: 0 auto;
   background-color: #f3f9f6;
   padding-bottom: 55px;
+}
+
+@media(min-width: 1200px) {
+  .features {
+    padding-bottom: 65px;
+  }
 }
 
 .features__logo {
@@ -555,10 +595,16 @@ li {
   margin: auto;
 }
 
+@media (min-width: 768px) {
+  .service {
+    padding-top: 11px;
+  }
+}
+
 .service__title {
   text-align: center;
   margin-bottom: 19px;
-  padding-top: 55px;
+  padding-top: 48px;
 }
 
 .service__main {
@@ -850,17 +896,13 @@ li {
   text-decoration: none;
 }
 
-.details-cover__breadcrumb-current {
-  font-weight: 700;
-}
-
 @media (min-width: 768px) {
   .details-cover {
     padding: 32px;
   }
 
   .details-cover__image {
-    max-width: 600px;
+    max-width: 1200px;
     margin: 0 auto;
   }
 
@@ -871,6 +913,8 @@ li {
 
   .details-cover__breadcrumb {
     font-size: 16px;
+    max-width: 1200px;
+    margin: auto;
   }
 }
 
@@ -899,10 +943,32 @@ li {
   background-color: #168352;
 }
 
-.point__image {
+.point__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  align-items: stretch;
+}
+
+@media (min-width: 768px) {
+ .point__container {
+    display: flex;
+    flex-direction: row;
+    max-width: 800px;
+    gap:31px;
+  }
+}
+
+.point__box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   width: 100%;
   max-width: 358px;
-  height: auto;
+}
+
+.point__image {
   margin-bottom: 16px;
   margin-top: 24px;
 }
@@ -1215,9 +1281,10 @@ li {
 
   .qa__icon--q {
   display: flex;
-  font-family: EB Garamond;
-  font-size: 16px;
-  font-weight: 500;
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: 700;
+  color: #168352;
 }
 
   @media (min-width: 768px) {
@@ -1229,8 +1296,8 @@ li {
 
   .qa__text {
   padding: 3px 12px;
-  font-size: 15px;
-  font-weight: 500;
+  font-size: 16px;
+  font-weight: 700;
 }
 
   @media (min-width: 768px) {
@@ -1260,21 +1327,8 @@ li {
   }
 }
 
-  .qa__icon--a {
-  display: flex;
-  font-family: EB Garamond;
+.qa__response {
   font-size: 16px;
-  font-weight: 500;
-  color: #000;
-}
-
-  @media (min-width: 768px) {
-  .qa__icon--a {
-    width: 50px;
-    height: 50px;
-    font-size: 20px;
-    line-height: 1;
-  }
 }
 
   .qa__toggle-icon {
@@ -1317,6 +1371,10 @@ li {
   transform: rotate(90deg);
   width: 25px;
   height: auto;
+}
+
+.footer__text {
+  color: #fff;
 }
 
 @media(min-width: 768px) {

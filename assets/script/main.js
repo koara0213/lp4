@@ -48,11 +48,11 @@ $('.qa__item').on('click', function() {
   var answerBox = $(this).closest('.qa__item').find('.qa__answer');
   answerBox.slideToggle();
 
-  var icon = $(this).closest('.qa__item').find('.bi-caret-down-fill, .bi-caret-up-fill');
-  if (icon.hasClass('bi-caret-down-fill')) {
-    icon.removeClass('bi-caret-down-fill').addClass('bi-caret-up-fill');
+  var icon = $(this).closest('.qa__item').find('.bi-plus-lg, .bi-dash-lg');
+  if (icon.hasClass('bi-plus-lg')) {
+    icon.removeClass('bi-plus-lg').addClass('bi-dash-lg');
   } else {
-    icon.removeClass('bi-caret-up-fill').addClass('bi-caret-down-fill');
+    icon.removeClass('bi-dash-lg').addClass('bi-plus-lg');
   }
 });
 
