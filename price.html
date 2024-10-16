@@ -42,7 +42,7 @@
     <!-- Header Section -->
     <header class="header">
       <h1 class="header__logo">
-        <a href="/" class="header__logo-link">
+        <a href="index.html" class="header__logo-link">
           <img src="assets/image/header-logo.png" alt="Kiramaki Farm" class="header__logo-image">
         </a>
       </h1>
@@ -52,9 +52,9 @@
 
       <nav class="hamburger-menu">
         <ul class="hamburger-menu-list">
-          <li><a id="top" href="#top">トップ</a></li>
-          <li><a id="price" href="#price">価格・スペック</a></li>
-          <li><a id="qa" href="#qa">よくあるご質問</a></li>
+          <li><a id="top" href="index.html">トップ</a></li>
+          <li><a id="price" href="price.html">価格・スペック</a></li>
+          <li><a id="qa" href="faq.html">よくあるご質問</a></li>
         </ul>
       </nav>
 
@@ -64,27 +64,59 @@
     <section class="details-cover">
       <div class="details-cover__image">
         <picture>
-          <source media="(min-width: 768px)" srcset="spec_main_pc.png">
+          <source media="(min-width: 768px)" srcset="assets/image/spec_main_pc.png">
           <img src="assets/image/spec_main_sp.png" alt="" class="details-cover__img">
         </picture>
       </div>
       <h1 class="details-cover__title">価格・スペック</h1>
       <nav class="details-cover__breadcrumb">
-        <a href="#" class="details-cover__breadcrumb-link">トップ</a> &gt;
+        <a href="index.html" class="details-cover__breadcrumb-link">トップ</a> &gt;
         <span class="details-cover__breadcrumb-current">価格・スペック</span>
       </nav>
     </section>
 
+     <!-- Gallery Section -->
+     <section class="gallery">
+      <h2 class="gallery__title">ギャラリー</h2>
+      <div class="gallery__slider">
+        <div class="gallery__slide">
+          <picture>
+            <source media="(min-width: 768px)" srcset="assets/image/gallery_1_pc.png">
+            <img src="assets/image/gallery_1_sp.png" alt="" class="gallery__image">
+          </picture>
+        </div>
+        <div class="gallery__slide">
+          <picture>
+            <source media="(min-width: 768px)" srcset="assets/image/gallery_2_pc.png">
+            <img src="assets/image/gallery_2_pc.png" alt="" class="gallery__image">
+          </picture>
+        </div>
+        <div class="gallery__slide">
+          <picture>
+            <source media="(min-width: 768px)" srcset="assets/image/gallery_3_pc.png">
+            <img src="assets/image/gallery_3_pc.png" alt="" class="gallery__image">
+          </picture>
+        </div>
+      </div>
+    </section>
 
     <!-- Point Section -->
     <section class="point">
       <h2 class="point__title">特長</h2>
-      <img src="assets/image/point_1_sp.png" alt="" class="point__image">
-      <p class="point__description">自動操縦が可能で、短時間で大量の農作物を監視、収穫、播種、散布などの作業ができます。</p>
-      <img src="assets/image/point_2_sp.png" alt="" class="point__image">
-      <p class="point__description">高精度のカメラやセンサーを搭載しており、正確な土壌・作物の情報を収集でき、水や肥料などの資源を適切に配分できます。</p>
-      <img src="assets/image/point_3_sp.png" alt="" class="point__image">
-      <p class="point__description">必要な場所にだけ肥料や農薬を散布することができます。これにより、農薬や肥料の過剰使用が抑えられ、環境負荷やコスト削減に繋がります。</p>
+      <div class="point__container">
+        <div class="point__box">
+          <img src="assets/image/point_1_sp.png" alt="" class="point__image">
+          <p class="point__description">自動操縦が可能で、短時間で大量の農作物を監視、収穫、播種、散布などの作業ができます。</p>
+        </div>
+        <div class="point__box">
+          <img src="assets/image/point_2_sp.png" alt="" class="point__image">
+          <p class="point__description">高精度のカメラやセンサーを搭載しており、正確な土壌・作物の情報を収集でき、水や肥料などの資源を適切に配分できます。</p>
+        </div>
+        <div class="point__box">
+          <img src="assets/image/point_3_sp.png" alt="" class="point__image">
+          <p class="point__description">必要な場所にだけ肥料や農薬を散布することができます。これにより、農薬や肥料の過剰使用が抑えられ、環境負荷やコスト削減に繋がります。</p>
+        </div>
+      </div>
     </section>
 
     <!-- Price Section -->
@@ -156,15 +188,17 @@
     <!-- contact -->
     <section class="contact">
       <div class="container">
-        <a href="#" class="button button-white-ghost">お問い合わせ</a>
+        <a href="contact/" class="button button-white-ghost">お問い合わせ</a>
       </div>
     </section>
 
     <!-- Footer Section -->
     <footer class="footer">
-      <span class="footer__text">価格・スペック</span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dash-lg footer-img" viewBox="0 0 16 16">
+      <a href="price.html" class="footer__text">価格・スペック</a>
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dash-lg footer-img" viewBox="0 0 16 16">
         <path fill-rule="evenodd" d="M2 8a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11A.5.5 0 0 1 2 8Z" />
-      </svg><span class="footer__text">よくあるご質問</span>
+      </svg>
+      <a href="faq.html" class="footer__text">よくあるご質問</a>
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

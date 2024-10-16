@@ -83,3 +83,14 @@ $('.qa__item').on('click', function() {
     }
   });
 
+  $(document).ready(function(){
+    $('.gallery__slider').slick({
+      dots: true,
+      autoplay: true,
+      autoplaySpeed: 3000, // 3秒ごとに自動で切り替わる
+      arrows: false,
+      customPaging: function(slider, i) {
+        return '<button></button>';
+      }
+    });
+  });
