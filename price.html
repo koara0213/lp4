@@ -48,6 +48,7 @@
       </h1>
 
       <button type="button" class="hamburger-button">
+        <div></div>
       </button>
 
       <nav class="hamburger-menu">
@@ -61,7 +62,7 @@
     </header>
 
     <!-- Details-Cover Section -->
-    <section class="details-cover">
+    <section class="details-cover header--margin">
       <div class="details-cover__image">
         <picture>
           <source media="(min-width: 768px)" srcset="assets/image/spec_main_pc.png">
@@ -70,13 +71,13 @@
       </div>
       <h1 class="details-cover__title">価格・スペック</h1>
       <nav class="details-cover__breadcrumb">
-        <a href="index.html" class="details-cover__breadcrumb-link">トップ</a> &gt;
+        <a href="index.html" class="details-cover__breadcrumb-link">トップ</a><i class="bi bi-chevron-compact-right"></i>
         <span class="details-cover__breadcrumb-current">価格・スペック</span>
       </nav>
     </section>
 
-     <!-- Gallery Section -->
-     <section class="gallery">
+    <!-- Gallery Section -->
+    <section class="gallery">
       <h2 class="gallery__title">ギャラリー</h2>
       <div class="gallery__slider">
         <div class="gallery__slide">
@@ -88,13 +89,13 @@
         <div class="gallery__slide">
           <picture>
             <source media="(min-width: 768px)" srcset="assets/image/gallery_2_pc.png">
-            <img src="assets/image/gallery_2_pc.png" alt="" class="gallery__image">
+            <img src="assets/image/gallery_2_sp.png" alt="" class="gallery__image">
           </picture>
         </div>
         <div class="gallery__slide">
           <picture>
             <source media="(min-width: 768px)" srcset="assets/image/gallery_3_pc.png">
-            <img src="assets/image/gallery_3_pc.png" alt="" class="gallery__image">
+            <img src="assets/image/gallery_3_sp.png" alt="" class="gallery__image">
           </picture>
         </div>
       </div>
@@ -105,16 +106,25 @@
       <h2 class="point__title">特長</h2>
       <div class="point__container">
         <div class="point__box">
-          <img src="assets/image/point_1_sp.png" alt="" class="point__image">
-          <p class="point__description">自動操縦が可能で、短時間で大量の農作物を監視、収穫、播種、散布などの作業ができます。</p>
+          <picture>
+            <source media="(min-width: 768px)" srcset="assets/image/point_1_pc.png">
+            <img src="assets/image/point_1_sp.png" alt="" class="point__image">
+          </picture>
+          <p class="point__description">自動操縦が可能で、短時間で大量の農作物<br class="sp_res">を監視、収穫、播種、散布などの作業がで<br class="sp_res">きます。</p>
         </div>
         <div class="point__box">
-          <img src="assets/image/point_2_sp.png" alt="" class="point__image">
-          <p class="point__description">高精度のカメラやセンサーを搭載しており、正確な土壌・作物の情報を収集でき、水や肥料などの資源を適切に配分できます。</p>
+          <picture>
+            <source media="(min-width: 768px)" srcset="assets/image/point_2_pc.png">
+            <img src="assets/image/point_2_sp.png" alt="" class="point__image">
+          </picture>
+          <p class="point__description">高精度のカメラやセンサーを搭載しており<br class="sp_res">、正確な土壌・作物の情報を収集でき、水<br class="sp_res">や肥料などの資源を適切に配分できます。</p>
         </div>
         <div class="point__box">
-          <img src="assets/image/point_3_sp.png" alt="" class="point__image">
-          <p class="point__description">必要な場所にだけ肥料や農薬を散布することができます。これにより、農薬や肥料の過剰使用が抑えられ、環境負荷やコスト削減に繋がります。</p>
+          <picture>
+            <source media="(min-width: 768px)" srcset="assets/image/point_3_pc.png">
+            <img src="assets/image/point_3_sp.png" alt="" class="point__image">
+          </picture>
+          <p class="point__description">必要な場所にだけ肥料や農薬を散布するこ<br class="sp_res">とができます。これにより、農薬や肥料の<br class="sp_res">過剰使用が抑えられ、環境負荷やコスト削減に繋がります。</p>
         </div>
       </div>
     </section>
@@ -129,61 +139,44 @@
 
     <!-- Spec Section -->
     <section class="specs">
-      <h2 class="specs__title">スペック</h2>
-      <div class="specs__body">
-        <h3 class="specs__subtitle">機体</h3>
-        <table class="specs__table">
-          <tr class="specs__row">
-            <th class="specs__header">ドローン名</th>
-          </tr>
-          <tr class="specs__row">
-            <td class="specs__data">アグリ・ファルコン</td>
-          </tr>
-          <tr class="specs__row">
-            <th class="specs__header">製品番号</th>
-          </tr>
-          <tr class="specs__row">
-            <td class="specs__data">AGF-100</td>
-          </tr>
-          <tr class="specs__row">
-            <th class="specs__header">飛行時間</th>
-          </tr>
-          <tr class="specs__row">
-            <td class="specs__data">60 分</td>
-          </tr>
-          <tr class="specs__row">
-            <th class="specs__header">最大積載量</th>
-          </tr>
-          <tr class="specs__row">
-            <td class="specs__data">5 kg</td>
-          </tr>
-          <tr class="specs__row">
-            <th class="specs__header">操作距離</th>
-          </tr>
-          <tr class="specs__row">
-            <td class="specs__data">3 km</td>
-          </tr>
-          <tr class="specs__row">
-            <th class="specs__header">機体重量</th>
-          </tr>
-          <tr class="specs__row">
-            <td class="specs__data">8 kg</td>
-          </tr>
-          <tr class="specs__row">
-            <th class="specs__header">機体寸法</th>
-          </tr>
-          <tr class="specs__row">
-            <td class="specs__data">150 x 150 x 40 cm</td>
-          </tr>
-          <tr class="specs__row">
-            <th class="specs__header">機能・特徴</th>
-          </tr>
-          <tr class="specs__row">
-            <td class="specs__data">自動操縦、植物生育モニタリング、農薬散布</td>
-          </tr>
-        </table>
-      </div>
+      <h2 class="spec__title">スペック</h2>
+      <p class="spec__sub">機体</p>
+      <dl class="specs__table">
+        <div class="specs__row">
+          <dt class="specs__header">ドローン名</dt>
+          <dd class="specs__data">アグリ・ファルコン</dd>
+        </div>
+        <div class="specs__row">
+          <dt class="specs__header">製品番号</dt>
+          <dd class="specs__data">AGF-100</dd>
+        </div>
+        <div class="specs__row">
+          <dt class="specs__header">飛行時間</dt>
+          <dd class="specs__data">60 分</dd>
+        </div>
+        <div class="specs__row">
+          <dt class="specs__header">最大積載量</dt>
+          <dd class="specs__data">5 kg</dd>
+        </div>
+        <div class="specs__row">
+          <dt class="specs__header">操作距離</dt>
+          <dd class="specs__data">3 km</dd>
+        </div>
+        <div class="specs__row">
+          <dt class="specs__header">機体重量</dt>
+          <dd class="specs__data">8 kg</dd>
+        </div>
+        <div class="specs__row">
+          <dt class="specs__header">機体寸法</dt>
+          <dd class="specs__data">150 x 150 x 40 cm</dd>
+        </div>
+        <div class="specs__row">
+          <dt class="specs__header">機能・特徴</dt>
+          <dd class="specs__data">自動操縦、植物生育モニタリング、農薬散布</dd>
+        </div>
+      </dl>
     </section>
+
 
     <!-- contact -->
     <section class="contact">
