@@ -845,6 +845,12 @@ li {
   margin-bottom: 10px;
 }
 
+@media (min-width: 768px) {
+.case__image:hover {
+    opacity: 0.6;
+  }
+}
+
 .case__description {
   font-size: 18px;
   color: #09947b;
@@ -859,6 +865,12 @@ li {
     font-size: 19px;
     width: 100%;
     line-height: 30px;
+  }
+}
+
+@media (min-width: 768px) {
+  .case__description:hover {
+    opacity: 0.6;
   }
 }
 
@@ -976,6 +988,12 @@ li {
   }
 }
 
+@media (min-width: 768px) {
+  .news__text:hover {
+    opacity: 0.6;
+  }
+}
+
 .news__button {
   max-width: 300px;
   padding-top: 20px;
@@ -1061,7 +1079,7 @@ li {
     border-radius: 0 40px 0 0;
     padding-top: 30px;
     padding-bottom: 35px;
-    padding-right: 36px;
+    padding-right: 35px;
     padding-left: 40px;
     margin-bottom: 0px;
     left: -2px;
@@ -1100,6 +1118,7 @@ li {
   max-width: 800px;
   margin: 0 auto;
   margin-bottom: 57px;
+  margin-top: 16px;
 }
 
 @media (min-width: 768px) {
@@ -1419,9 +1438,17 @@ li {
   font-size: 20px;
   font-weight: 700;
   position: relative;
-  padding-left: 15px;
+  padding-left: 18px;
   max-width: 800px;
   margin-bottom: 17px;
+}
+
+@media (min-width: 768px) {
+  .spec__sub {
+    font-size: 23px;
+    padding-left: 50px;
+    margin-top: 36px;
+  }
 }
 
 .spec__sub::before {
@@ -1431,7 +1458,14 @@ li {
   top: 0;
   height: 100%;
   width: 4px; /* 線の太さ */
-  background-color: #168352; /* 緑色の縦線 */
+    background-color: #168352; /* 緑色の縦線 */
+  }
+
+@media (min-width: 768px) {
+  .spec__sub::before {
+    left: 30px;
+    width: 2px;
+  }
 }
 
 .specs__table {
@@ -1451,14 +1485,14 @@ li {
 
 .specs__header {
   background-color: #f5f5f5;
-  padding: 12px;
+  padding: 7px 12px 14px 19px;
   font-weight: 700;
   font-size: 16px;
 }
 
 .specs__data {
   background-color: #fff;
-  padding: 12px;
+  padding: 2px 12px 9px 20px  ;
   font-size: 16px;
 }
 
@@ -1466,6 +1500,7 @@ li {
   .specs__table {
     display: flex;
     flex-wrap: wrap;
+    margin-top: 27px;
   }
 
   .specs__row {
@@ -1475,19 +1510,20 @@ li {
     border-bottom: 1px solid #ddd;
   }
 
-  .specs__header {
-    font-size: 18px;
-    width: 27%;
-  }
-
   .specs__data {
-    font-size: 18px;
+    font-size: 17px;
     width: 73%;
+    padding: 17px 12px 10px 23px;
+    letter-spacing: -1px;
   }
 
   .specs__header {
     border-right: 1px solid #ddd;
+    font-size: 16px;
+    width: 27%;
+    padding: 18px 12px 22px 19px;
   }
+
 
   .specs__header:nth-child(odd), .specs__data:nth-child(odd) {
     background-color: #f5f5f5;
@@ -1507,13 +1543,15 @@ li {
   color: #fff;
   background-image: url("../image/contact_sp.png");
   background-size: cover;
-  margin-top: 56px;
+  margin-top: 62px;
 }
 
 @media (min-width: 768px) {
   .contact {
     background-image: url("../image/contact_pc.png");
     background-position: center top;
+    margin-top: 67px;
+    padding-bottom: 32px;
   }
 }
 
@@ -1547,16 +1585,17 @@ li {
 }
 
 .button-white-ghost {
-  width: 21.875rem;
-  padding-top: 1rem;
-  padding-bottom: 1.275rem;
+  width: 22.3rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
   font-size: 1.25rem;
   border: .125rem solid #fff;
 }
 
 @media (min-width: 768px) {
   .button-white-ghost {
-    width: 31.25rem;
+    width: 22.25rem;
+    margin-top: 45px;
   }
 }
 
@@ -1571,12 +1610,13 @@ li {
   margin-top: 0px;
   margin-bottom: 60px;
   padding-top: 22px;
-  padding-bottom: 13px;
+  padding-bottom: 85px;
 }
 
   @media (min-width: 768px) {
   .qa__container {
     padding-bottom: 15px;
+    padding-top: 5px;
   }
 }
 
@@ -1626,38 +1666,58 @@ li {
 
   .qa__item {
   display: flex;
-  flex-direction: column;
   position: relative;
-  width: calc(100% - 32px);
-  max-width: 600px;
   background-color: #fff;
-  margin: auto;
-  margin-bottom: 20px;
   border: 1px solid #ccc;
   border-radius: 10px;
-  padding-top: 16px;
-  padding-bottom: 16px;
+  flex-direction: column;
+  width: calc(100% - 32px);
+  max-width: 600px;
+  margin: auto;
+  margin-bottom: 25px;
+  padding-top: 12px;
+  padding-bottom: 17px;
 }
 
   @media (min-width: 768px) {
   .qa__item {
     width: 100%;
-    max-width: 600px;
+    max-width: 800px;
+    padding-bottom: 0px;
+    margin-bottom: 24px;
+  }
+}
+
+.qa__item .sp_res {
+  display: inline;
+}
+
+@media (min-width: 768px) {
+  .qa__item .sp_res {
+    display: none;
+  }
+}
+
+.qa__item .pc_res {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .qa__item .pc_res {
+    display: inline;
   }
 }
 
   .qa__question {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding-left: 16px;
-  padding-right: 16px;
   line-height: 1.87;
+  padding: 0px 16px;
 }
 
   @media (min-width: 768px) {
   .qa__question {
-    padding-bottom: 17px;
+    padding-bottom: 6px;
   }
 }
 
@@ -1667,38 +1727,40 @@ li {
   font-size: 24px;
   font-weight: 700;
   color: #168352;
-  margin-right: 8px;
+  margin-right: 16px;
+  padding-left: 7px;
 }
 
   @media (min-width: 768px) {
   .qa__icon--q {
-    font-size: 20px;
-    padding-left: 8px;
+    font-size: 23px;
+    padding-left: 15px;
   }
 }
 
   .qa__text {
-  padding-left: 34px;
-  padding-right: 51px;
   font-size: 16px;
   font-weight: 700;
+  line-height: 28px;
 }
 
   @media (min-width: 768px) {
   .qa__text {
     padding-left: unset;
-    padding: 0px 15px;
+    padding: 11px 0px;
     line-height: 26px;
+    font-size: 18px;
   }
 }
 
   .qa__answer {
-  display: flex;
-  flex-direction: row;
-  padding-left: 16px;
-  padding-right: 5px;
-  padding-bottom: 22px;
-  line-height: 1.87;
+    display: flex;
+    flex-direction: row;
+    padding-left: 25px;
+    padding-right: 13px;
+    line-height: 28px;
+    padding-top: 3px;
+    letter-spacing: 0px;
 }
 
   .qa__answer.active {
@@ -1707,7 +1769,7 @@ li {
 
   @media (min-width: 768px) {
   .qa__answer {
-    padding: 0px 20px 25px 24px;
+    padding: 3px 20px 17px 30px;
   }
 }
 
@@ -1715,26 +1777,30 @@ li {
   font-size: 16px;
 }
 
-  .qa__toggle-icon {
+.qa__toggle-icon {
   display: flex;
-  align-items: center;
   cursor: pointer;
   margin-left: auto;
   font-size: 24px;
+  margin-right: 5px;
 }
 
 .qa__labels {
   display: flex;
   gap: 8px;
   margin-right: 8px;
+  margin-top: 12px;
 }
 
 .qa__label {
   color: #168352;
-  padding: 4px 8px;
+  padding: 1px 10px;
   border: 1px solid #168352;
   border-radius: 5px;
   font-size: 11px;
+  width: 100px;
+  text-align: center;
+  height: auto;
 }
 
 .qa__list {
@@ -1785,8 +1851,14 @@ li {
 }
 
 @media(min-width: 768px) {
-  .footer__text{
+  .footer__text {
     position: relative;
     left: 6px;
+  }
+}
+
+@media(min-width: 768px) {
+  .footer__text:hover {
+    opacity: 0.6;
   }
 }
