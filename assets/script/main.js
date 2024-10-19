@@ -13,32 +13,6 @@ $(window).on('resize', function () {
   hamburger.removeClass('hamburger-menu-active');
 });
 
-// CustomerVoices Section
-$(document).ready(function(){
-  $('.customer__slider').slick({
-    infinite: true,
-    slidesToShow: 3,
-    slidesToScroll: 3,
-    dots: true,
-    arrows: false,
-    variableWidth: false,
-    centerMode: false,
-    centerPadding: '60px',
-    responsive: [
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          centerPadding: '40px',
-          variableWidth: true,
-          centerMode: true,
-              }
-      }
-    ]
-  });
-});
-
 // Q&A
 $(document).ready(function() {
   $('.qa__answer').hide();
@@ -83,14 +57,31 @@ $('.qa__item').on('click', function() {
     }
   });
 
-  $(document).ready(function(){
-    $('.gallery__slider').slick({
-      dots: true,
-      autoplay: true,
-      autoplaySpeed: 3000, // 3秒ごとに自動で切り替わる
-      arrows: false,
-      customPaging: function(slider, i) {
-        return '<button></button>';
-      }
-    });
+// Gallery Slider
+$(document).ready(function(){
+  $('.gallery__slider').slick({
+    dots: true,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    arrows: false,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    adaptiveHeight: true,
+    customPaging: function(slider, i) {
+      return '<button></button>';
+    }
+  });
+});
+
+  document.addEventListener('DOMContentLoaded', function() {
+    // 現在のページのパスを取得
+    var currentPath = window.location.pathname;
+
+    // idが"qa"のリンク要素を取得
+    var qaLink = document.getElementById('qa');
+
+    // リンクのパスと現在のページのパスが一致しているか確認
+    if (qaLink && qaLink.getAttribute('href') === currentPath) {
+      qaLink.classList.add('active');
+    }
   });

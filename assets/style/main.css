@@ -1014,7 +1014,7 @@ li {
   padding: 16px;
   background-color: #fff;
   position: relative;
-  margin-bottom: 15px;
+  /* margin-bottom: 15px; */
   padding-top: 83px;
 }
 
@@ -1157,7 +1157,15 @@ li {
 .gallery__image {
   width: 100%;
   border-radius: 20px;
-  display: block;
+  /* display: block; */
+  height: auto;
+}
+
+@media (min-width: 768px) {
+  .gallery__image {
+    width: auto;
+    max-width: 100%;
+  }
 }
 
 /* Slick Dots */
@@ -1197,6 +1205,12 @@ li {
   width: calc(100% - 30px);
   margin: 0 auto;
   margin-bottom: 31px;
+}
+
+@media (min-width: 768px) {
+  .point {
+    margin-bottom: 36px;
+  }
 }
 
 .point__title {
@@ -1331,6 +1345,12 @@ li {
   margin-top: 16px;
 }
 
+@media (min-width: 768px) {
+  .price__body {
+    margin-top: 25px;
+  }
+}
+
 .price__subtitle {
   font-size: 32px;
   font-weight: 700;
@@ -1350,9 +1370,16 @@ li {
   width: calc(100% - 32px);
   margin: 0 auto;
   max-width: 800px;
+  margin-top: 40px;
 }
 
-.spec__title {
+@media (min-width: 768px) {
+  .specs {
+    margin-top: 46px;
+  }
+}
+
+  .spec__title {
   font-size: 22px;
   font-weight: 700;
   border-bottom: 3px solid #ddd;
@@ -1541,9 +1568,9 @@ li {
 /* Q&A Section
 ------------------------------------------ */
 .qa__container {
-  margin-top: 28px;
+  margin-top: 0px;
   margin-bottom: 60px;
-  padding-top: 37px;
+  padding-top: 22px;
   padding-bottom: 13px;
 }
 

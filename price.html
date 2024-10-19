@@ -81,22 +81,25 @@
       <h2 class="gallery__title">ギャラリー</h2>
       <div class="gallery__slider">
         <div class="gallery__slide">
-          <picture>
-            <source media="(min-width: 768px)" srcset="assets/image/gallery_1_pc.png">
-            <img src="assets/image/gallery_1_sp.png" alt="" class="gallery__image">
-          </picture>
+          <img
+            src="assets/image/gallery_1_sp.png"
+            srcset="assets/image/gallery_1_sp.png 768w, assets/image/gallery_1_pc.png 1024w"
+            sizes="(max-width: 768px) 100vw, auto"
+            alt="" class="gallery__image">
         </div>
         <div class="gallery__slide">
-          <picture>
-            <source media="(min-width: 768px)" srcset="assets/image/gallery_2_pc.png">
-            <img src="assets/image/gallery_2_sp.png" alt="" class="gallery__image">
-          </picture>
+          <img
+            src="assets/image/gallery_2_sp.png"
+            srcset="assets/image/gallery_2_sp.png 768w, assets/image/gallery_2_pc.png 1024w"
+            sizes="(max-width: 768px) 100vw, auto"
+            alt="" class="gallery__image">
         </div>
         <div class="gallery__slide">
-          <picture>
-            <source media="(min-width: 768px)" srcset="assets/image/gallery_3_pc.png">
-            <img src="assets/image/gallery_3_sp.png" alt="" class="gallery__image">
-          </picture>
+          <img
+            src="assets/image/gallery_3_sp.png"
+            srcset="assets/image/gallery_3_sp.png 768w, assets/image/gallery_3_pc.png 1024w"
+            sizes="(max-width: 768px) 100vw, auto"
+            alt="" class="gallery__image">
         </div>
       </div>
     </section>

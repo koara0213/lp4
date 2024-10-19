@@ -48,20 +48,21 @@
       </h1>
 
       <button type="button" class="hamburger-button">
+        <div></div>
       </button>
 
       <nav class="hamburger-menu">
         <ul class="hamburger-menu-list">
           <li><a id="top" href="index.html">トップ</a></li>
           <li><a id="price" href="price.html">価格・スペック</a></li>
-          <li><a id="qa" href="faq.html">よくあるご質問</a></li>
+          <li><a id="qa" href="faq.html" class="nav__link">よくあるご質問</a></li>
         </ul>
       </nav>
 
     </header>
 
     <!-- Details-Cover Section -->
-    <section class="details-cover">
+    <section class="details-cover header--margin">
       <div class="details-cover__image">
         <picture>
           <source media="(min-width: 768px)" srcset="assets/image/qa_main_pc.png">
@@ -70,7 +71,7 @@
       </div>
       <h1 class="details-cover__title">よくあるご質問</h1>
       <nav class="details-cover__breadcrumb">
-        <a href="index.html" class="details-cover__breadcrumb-link">トップ</a> &gt;
+        <a href="index.html" class="details-cover__breadcrumb-link">トップ</a><i class="bi bi-chevron-compact-right"></i>
         <span class="details-cover__breadcrumb-current">よくあるご質問</span>
       </nav>
     </section>
@@ -78,196 +79,258 @@
     <!-- Q&A Section -->
     <section class="qa">
       <div class="qa__container">
-
-        <!-- Question 1 -->
-        <div class="qa__item">
-          <div class="qa__question">
-            <div class="qa__icon--q">Q.</div>
-            <div class="qa__text">
-              <p>農業用ドローンの主な用途は何ですか？</p>
+        <ul class="qa__list">
+          <!-- Question 1 -->
+          <li class="qa__item">
+            <div class="qa__question">
+              <div class="qa__icon--q">Q.</div>
+              <div class="qa__labels">
+                <span class="qa__label">ご利用について</span>
+              </div>
+              <div class="qa__toggle-icon"><span class="bi bi-plus-lg"></span></div>
             </div>
-            <div class="qa__toggle-icon"><span class="bi bi-plus-lg"></span></div>
-          </div>
-
-          <div class="qa__answer">
-            <div class="qa__response">
-              <p>農業用ドローンは、作物の健康状態のモニタリング、除草剤・肥料等の散布、灌漑システムの管理など、農業生産の効率を向上させるために使用されます。</p>
+            <div class="qa__question">
+              <div class="qa__text">
+                <p>農業用ドローンの主な用途は何ですか？</p>
+              </div>
             </div>
-          </div>
-        </div>
-
-        <!-- Question 2 -->
-        <div class="qa__item">
-          <div class="qa__question">
-            <div class="qa__icon--q">Q.</div>
-            <div class="qa__text">
-              <p>農業用ドローンの導入による主な利点は何ですか？</p>
+            <div class="qa__answer">
+              <div class="qa__response">
+                <p>農業用ドローンは、作物の健康状態のモニタリング、除草剤・肥料等の散布、灌漑システムの管理など、農業生産の効率を向上させるために使用されます。</p>
+              </div>
             </div>
-            <div class="qa__toggle-icon"><span class="bi bi-plus-lg"></span></div>
-          </div>
+          </li>
 
-          <div class="qa__answer">
-            <div class="qa__response">
-              <p>農業用ドローンの導入により、労働力を削減し作業効率を向上させることができます。また、病害虫の早期発見や適切な散布が可能となり、生産性や質を向上させることができます。</p>
+          <!-- Question 2 -->
+          <li class="qa__item">
+            <div class="qa__question">
+              <div class="qa__icon--q">Q.</div>
+              <div class="qa__labels">
+                <span class="qa__label">ご利用について</span>
+              </div>
+              <div class="qa__labels">
+                <span class="qa__label">製品について</span>
+              </div>
+              <div class="qa__toggle-icon"><span class="bi bi-plus-lg"></span></div>
             </div>
-          </div>
-        </div>
-
-        <!-- Question 3 -->
-        <div class="qa__item">
-          <div class="qa__question">
-            <div class="qa__icon--q">Q.</div>
-            <div class="qa__text">
-              <p>農業用ドローンの種類は？</p>
+            <div class="qa__question">
+              <div class="qa__text">
+                <p>農業用ドローンの導入による主な利点は何ですか？</p>
+              </div>
             </div>
-            <div class="qa__toggle-icon"><span class="bi bi-plus-lg"></span></div>
-          </div>
-
-          <div class="qa__answer">
-            <div class="qa__response">
-              <p>フィックスウィング（固定翼）ドローン、ロータリーウィング（回転翼）ドローン、および、マルチコプター（複数のプロペラを持つ）ドローンがあります。</p>
+            <div class="qa__answer">
+              <div class="qa__response">
+                <p>農業用ドローンの導入により、労働力を削減し作業効率を向上させることができます。また、病害虫の早期発見や適切な散布が可能となり、生産性や質を向上させることができます。</p>
+              </div>
             </div>
-          </div>
-        </div>
+          </li>
 
-        <!-- Question 4 -->
-        <div class="qa__item">
-          <div class="qa__question">
-            <div class="qa__icon--q">Q.</div>
-            <div class="qa__text">
-              <p>農業用ドローンの価格はどのくらいですか？</p>
+          <!-- Question 3 -->
+          <li class="qa__item">
+            <div class="qa__question">
+              <div class="qa__icon--q">Q.</div>
+              <div class="qa__labels">
+                <span class="qa__label">ご利用について</span>
+              </div>
+              <div class="qa__labels">
+                <span class="qa__label">製品について</span>
+              </div>
+              <div class="qa__toggle-icon"><span class="bi bi-plus-lg"></span></div>
             </div>
-            <div class="qa__toggle-icon"><span class="bi bi-plus-lg"></span></div>
-          </div>
-
-          <div class="qa__answer">
-            <div class="qa__response">
-              <p>ドローンの種類、性能、機能によって価格は異なりますが、一般的には数万円から数百万円の範囲で販売されています。</p>
+            <div class="qa__question">
+              <div class="qa__text">
+                <p>農業用ドローンの種類は？</p>
+              </div>
             </div>
-          </div>
-        </div>
-
-        <!-- Question 5 -->
-        <div class="qa__item">
-          <div class="qa__question">
-            <div class="qa__icon--q">Q.</div>
-            <div class="qa__text">
-              <p>特別な免許や資格は必要ですか？</p>
+            <div class="qa__answer">
+              <div class="qa__response">
+                <p>フィックスウィング（固定翼）ドローン、ロータリーウィング（回転翼）ドローン、および、マルチコプター（複数のプロペラを持つ）ドローンがあります。</p>
+              </div>
             </div>
-            <div class="qa__toggle-icon"><span class="bi bi-plus-lg"></span></div>
-          </div>
+          </li>
 
-          <div class="qa__answer">
-            <div class="qa__response">
-              <p>農業用ドローンの操縦には、国によって異なるが、無人航空機操縦士免許やドローン操縦資格が必要とされる場合があります。
-              </p>
+          <!-- Question 4 -->
+          <li class="qa__item">
+            <div class="qa__question">
+              <div class="qa__icon--q">Q.</div>
+              <div class="qa__labels">
+                <span class="qa__label">ご利用について</span>
+              </div>
+              <div class="qa__labels">
+                <span class="qa__label">製品について</span>
+              </div>
+              <div class="qa__toggle-icon"><span class="bi bi-plus-lg"></span></div>
             </div>
-          </div>
-        </div>
-
-        <!-- Question 6 -->
-        <div class="qa__item">
-          <div class="qa__question">
-            <div class="qa__icon--q">Q.</div>
-            <div class="qa__text">
-              <p>農業用ドローンの法規制は何ですか？</p>
+            <div class="qa__question">
+              <div class="qa__text">
+                <p>農業用ドローンの価格はどのくらいですか？</p>
+              </div>
             </div>
-            <div class="qa__toggle-icon"><span class="bi bi-plus-lg"></span></div>
-          </div>
-
-          <div class="qa__answer">
-            <div class="qa__response">
-              <p>国や地域によって異なりますが、一般的には飛行高度、飛行速度、操縦者とドローンの距離、人口密集地や空港周辺の飛行に関する制限が設けられています。</p>
+            <div class="qa__answer">
+              <div class="qa__response">
+                <p>ドローンの種類、性能、機能によって価格は異なりますが、一般的には数万円から数百万円の範囲で販売されています。</p>
+              </div>
             </div>
-          </div>
-        </div>
+          </li>
 
-        <!-- Question 7 -->
-        <div class="qa__item">
-          <div class="qa__question">
-            <div class="qa__icon--q">Q.</div>
-            <div class="qa__text">
-              <p>農業用ドローンのバッテリー寿命は？</p>
+          <!-- Question 5 -->
+          <li class="qa__item">
+            <div class="qa__question">
+              <div class="qa__icon--q">Q.</div>
+              <div class="qa__labels">
+                <span class="qa__label">製品について</span>
+              </div>
+              <div class="qa__toggle-icon"><span class="bi bi-plus-lg"></span></div>
             </div>
-            <div class="qa__toggle-icon"><span class="bi bi-plus-lg"></span></div>
-          </div>
-
-          <div class="qa__answer">
-            <div class="qa__response">
-              <p>ドローンの種類やバッテリー容量によって異なりますが、一般的には約20分から60分の飛行時間があります。</p>
+            <div class="qa__question">
+              <div class="qa__text">
+                <p>特別な免許や資格は必要ですか？</p>
+              </div>
             </div>
-          </div>
-        </div>
-
-        <!-- Question 8 -->
-        <div class="qa__item">
-          <div class="qa__question">
-            <div class="qa__icon--q">Q.</div>
-            <div class="qa__text">
-              <p>散布する薬剤や肥料の量はどのように制御されますか？</p>
+            <div class="qa__answer">
+              <div class="qa__response">
+                <p>農業用ドローンの操縦には、国によって異なるが、無人航空機操縦士免許やドローン操縦資格が必要とされる場合があります。</p>
+              </div>
             </div>
-            <div class="qa__toggle-icon"><span class="bi bi-plus-lg"></span></div>
-          </div>
+          </li>
 
-          <div class="qa__answer">
-            <div class="qa__response">
-              <p>農業用ドローンには、散布量を制御するためのシステムが搭載されており、必要な量を正確に散布できます。</p>
+          <!-- Question 6 -->
+          <li class="qa__item">
+            <div class="qa__question">
+              <div class="qa__icon--q">Q.</div>
+              <div class="qa__labels">
+                <span class="qa__label">使用について</span>
+              </div>
+              <div class="qa__toggle-icon"><span class="bi bi-plus-lg"></span></div>
             </div>
-          </div>
-        </div>
-
-        <!-- Question 9 -->
-        <div class="qa__item">
-          <div class="qa__question">
-            <div class="qa__icon--q">Q.</div>
-            <div class="qa__text">
-              <p>データ収集や解析にはどのようなソフトウェアが使用されますか？</p>
+            <div class="qa__question">
+              <div class="qa__text">
+                <p>農業用ドローンの法規制は何ですか？</p>
+              </div>
             </div>
-            <div class="qa__toggle-icon"><span class="bi bi-plus-lg"></span></div>
-          </div>
-
-          <div class="qa__answer">
-            <div class="qa__response">
-              <p>農業用ドローンのデータ収集や解析には、専用のソフトウェアが使用されます。これにより、作物の健康状態や生育状況を詳細に分析することができます。
-              </p>
+            <div class="qa__answer">
+              <div class="qa__response">
+                <p>国や地域によって異なりますが、一般的には飛行高度、飛行速度、操縦者とドローンの距離、人口密集地や空港周辺の飛行に関する制限が設けられています。</p>
+              </div>
             </div>
-          </div>
-        </div>
+          </li>
 
-        <!-- Question 10 -->
-        <div class="qa__item">
-          <div class="qa__question">
-            <div class="qa__icon--q">Q.</div>
-            <div class="qa__text">
-              <p>農業用ドローンはどのような気象条件で飛行できますか？</p>
+          <!-- Question 7 -->
+          <li class="qa__item">
+            <div class="qa__question">
+              <div class="qa__icon--q">Q.</div>
+              <div class="qa__labels">
+                <span class="qa__label">製品について</span>
+              </div>
+              <div class="qa__toggle-icon"><span class="bi bi-plus-lg"></span></div>
             </div>
-            <div class="qa__toggle-icon"><span class="bi bi-plus-lg"></span></div>
-          </div>
-
-          <div class="qa__answer">
-            <div class="qa__response">
-              <p>雨や強風の条件下では飛行が困難だったり安全上の問題が発生することがあります。ドローンの性能や設計によって対応できる気象条件は異なります。</p>
+            <div class="qa__question">
+              <div class="qa__text">
+                <p>農業用ドローンのバッテリー寿命は？</p>
+              </div>
             </div>
-          </div>
-        </div>
-
-        <!-- Question 11 -->
-        <div class="qa__item">
-          <div class="qa__question">
-            <div class="qa__icon--q">Q.</div>
-            <div class="qa__text">
-              <p>農業用ドローンのメンテナンスには何が必要ですか？</p>
+            <div class="qa__answer">
+              <div class="qa__response">
+                <p>ドローンの種類やバッテリー容量によって異なりますが、一般的には約20分から60分の飛行時間があります。</p>
+              </div>
             </div>
-            <div class="qa__toggle-icon"><span class="bi bi-plus-lg"></span></div>
-          </div>
+          </li>
 
-          <div class="qa__answer">
-            <div class="qa__response">
-              <p>ドローンの定期点検や部品の交換、ソフトウェアのアップデートなどが必要となります。メンテナンスは専門業者やメーカーに依頼することもできます。</p>
+          <!-- Question 8 -->
+          <li class="qa__item">
+            <div class="qa__question">
+              <div class="qa__icon--q">Q.</div>
+              <div class="qa__labels">
+                <span class="qa__label">使用について</span>
+              </div>
+              <div class="qa__labels">
+                <span class="qa__label">製品について</span>
+              </div>
+              <div class="qa__toggle-icon"><span class="bi bi-plus-lg"></span></div>
             </div>
-          </div>
-        </div>
+            <div class="qa__question">
+              <div class="qa__text">
+                <p>散布する薬剤や肥料の量はどのように制御されますか？</p>
+              </div>
+            </div>
+            <div class="qa__answer">
+              <div class="qa__response">
+                <p>農業用ドローンには、散布量を制御するためのシステムが搭載されており、必要な量を正確に散布できます。</p>
+              </div>
+            </div>
+          </li>
 
+          <!-- Question 9 -->
+          <li class="qa__item">
+            <div class="qa__question">
+              <div class="qa__icon--q">Q.</div>
+              <div class="qa__labels">
+                <span class="qa__label">製品について</span>
+              </div>
+              <div class="qa__toggle-icon"><span class="bi bi-plus-lg"></span></div>
+            </div>
+            <div class="qa__question">
+              <div class="qa__text">
+                <p>データ収集や解析にはどのようなソフトウェアが使用されますか？</p>
+              </div>
+            </div>
+            <div class="qa__answer">
+              <div class="qa__response">
+                <p>農業用ドローンのデータ収集や解析には、専用のソフトウェアが使用されます。これにより、作物の健康状態や生育状況を詳細に分析することができます。</p>
+              </div>
+            </div>
+          </li>
+
+          <!-- Question 10 -->
+          <li class="qa__item">
+            <div class="qa__question">
+              <div class="qa__icon--q">Q.</div>
+              <div class="qa__labels">
+                <span class="qa__label">使用について</span>
+              </div>
+              <div class="qa__labels">
+                <span class="qa__label">製品について</span>
+              </div>
+              <div class="qa__toggle-icon"><span class="bi bi-plus-lg"></span></div>
+            </div>
+            <div class="qa__question">
+              <div class="qa__text">
+                <p>農業用ドローンはどのような気象条件で飛行できますか？</p>
+              </div>
+            </div>
+            <div class="qa__answer">
+              <div class="qa__response">
+                <p>雨や強風の条件下では飛行が困難だったり安全上の問題が発生することがあります。ドローンの性能や設計によって対応できる気象条件は異なります。</p>
+              </div>
+            </div>
+          </li>
+
+          <!-- Question 11 -->
+          <li class="qa__item">
+            <div class="qa__question">
+              <div class="qa__icon--q">Q.</div>
+              <div class="qa__labels">
+                <span class="qa__label">ご利用について</span>
+              </div>
+              <div class="qa__labels">
+                <span class="qa__label">製品について</span>
+              </div>
+              <div class="qa__toggle-icon"><span class="bi bi-plus-lg"></span></div>
+            </div>
+            <div class="qa__question">
+              <div class="qa__text">
+                <p>農業用ドローンのメンテナンスには何が必要ですか？</p>
+              </div>
+            </div>
+            <div class="qa__answer">
+              <div class="qa__response">
+                <p>ドローンの定期点検や部品の交換、ソフトウェアのアップデートなどが必要となります。メンテナンスは専門業者やメーカーに依頼することもできます。</p>
+              </div>
+            </div>
+          </li>
+
+
+        </ul>
       </div>
     </section>
 
@@ -277,7 +340,7 @@
       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dash-lg footer-img" viewBox="0 0 16 16">
         <path fill-rule="evenodd" d="M2 8a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11A.5.5 0 0 1 2 8Z" />
       </svg>
-      <a href="faq.html"  class="footer__text">よくあるご質問</a>
+      <a href="faq.html" class="footer__text">よくあるご質問</a>
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
