@@ -73,15 +73,51 @@ $(document).ready(function(){
   });
 });
 
+// Header menu Link Action
   document.addEventListener('DOMContentLoaded', function() {
-    // 現在のページのパスを取得
-    var currentPath = window.location.pathname;
 
-    // idが"qa"のリンク要素を取得
-    var qaLink = document.getElementById('qa');
+    var links = document.querySelectorAll('.hamburger-menu a');
 
-    // リンクのパスと現在のページのパスが一致しているか確認
-    if (qaLink && qaLink.getAttribute('href') === currentPath) {
-      qaLink.classList.add('active');
+
+    links.forEach(function(link) {
+    link.addEventListener('click', function() {
+
+      links.forEach(function(l) {
+        l.classList.remove('active-link');
+      });
+
+      this.classList.add('active-link');
+    });
+  });
+});
+
+// Header menu ActiveLink ColorChange
+document.addEventListener('DOMContentLoaded', function() {
+  var links = document.querySelectorAll('.hamburger-menu-list a');
+  var currentPath = window.location.pathname;
+
+  links.forEach(function(link) {
+    if (link.getAttribute('href') === currentPath) {
+      link.classList.add('active');
     }
   });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+
+  var currentPath = window.location.pathname;
+
+
+  var topLink = document.getElementById('top');
+  var priceLink = document.getElementById('price');
+  var qaLink = document.getElementById('qa');
+
+
+  if (currentPath.includes("index.html")) {
+    topLink.classList.add('active-link');
+  } else if (currentPath.includes("price.html")) {
+    priceLink.classList.add('active-link');
+  } else if (currentPath.includes("faq.html")) {
+    qaLink.classList.add('active-link');
+  }
+});
