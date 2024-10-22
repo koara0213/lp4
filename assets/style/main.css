@@ -1390,7 +1390,8 @@ li {
   font-weight: 700;
   font-family: Montserrat;
   max-width: 800px;
-  margin: auto
+  margin: auto;
+  color: #168352;
 }
 
 .price__subtitle--unit {
